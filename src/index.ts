@@ -36,7 +36,7 @@ const app = express()
 createConnection()
 
 app.use(express.json())
-app.use(routes)
+app.use("/api", routes)
 
 app.listen(process.env.PORT || port, () => {
     console.log(`Server running at http://${hostname}:${port}/`);

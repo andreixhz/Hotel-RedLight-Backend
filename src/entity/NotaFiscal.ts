@@ -5,6 +5,7 @@ import {
     CreateDateColumn,
     UpdateDateColumn,
     ManyToOne,
+    JoinColumn,
 } from "typeorm";
 import { Hospede } from "./Hospede";
 
@@ -14,7 +15,11 @@ export class NotaFiscal {
     @PrimaryGeneratedColumn()
     idNotaFiscal: string;
     
-    @ManyToOne(type => Hospede, notasFiscais => NotaFiscal)
+    @Column()
+    idHospede: number;
+
+    @JoinColumn({name: "idHospede"})
+    @ManyToOne(type => Hospede, notasFiscais => NotaFiscal, {eager: true})
     hospede: Hospede;    
 
     @Column()

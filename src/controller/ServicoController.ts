@@ -7,7 +7,7 @@ export const getServicos = async (request: Request, response: Response) => {
     return response.json(servico);
 }
 
-export const getServico = async (request: Request, response: Response) => {
+export const getOneServico = async (request: Request, response: Response) => {
     const { id } = request.params
     const servico = await getRepository(Servico).findOne(id)
     return servico == undefined ? response.status(404).json('Serviço não localizado.') : response.json(servico);

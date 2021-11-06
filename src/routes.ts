@@ -7,29 +7,35 @@ import { deleteHospede, getHospede, getHospedes, saveHospede, updateHospede } fr
 const routes = Router()
 
 
-routes.get('/api/ocupacao', getOcupacoes);
-routes.get('/api/ocupacao/:id', getOcupacao);
-routes.post('/api/ocupacao', saveOcupacao);
-routes.put('/api/ocupacao/:id', updateOcupacao)
-routes.delete('/api/ocupacao/:id', deleteOcupacao)
+routes.get('/ocupacao', getOcupacoes);
+routes.get('/ocupacao/:id', getOcupacao);
+routes.post('/ocupacao', saveOcupacao);
+routes.put('/ocupacao/:id', updateOcupacao)
+routes.delete('/ocupacao/:id', deleteOcupacao)
 
-routes.get('/api/funcionario', getFuncionarios);
-routes.get('/api/funcionario/:id', getFuncionario);
-routes.post('/api/funcionario', saveFuncionario);
-routes.put('/api/funcionario/:id', updateFuncionario)
-routes.delete('/api/funcionario/:id', deleteFuncionario)
+routes.get('/funcionario', getFuncionarios);
+routes.get('/funcionario/:id', getFuncionario);
+routes.post('/funcionario', saveFuncionario);
+routes.put('/funcionario/:id', updateFuncionario)
+routes.delete('/funcionario/:id', deleteFuncionario)
 
-routes.get('/api/comodidade', getComodidades);
-routes.get('/api/comodidade/:id', getComodidade);
-routes.post('/api/comodidade', saveComodidade);
-routes.put('/api/comodidade/:id', updateComodidade)
-routes.delete('/api/comodidade/:id', deleteComodidade)
+routes.get('/comodidade', getComodidades);
+routes.get('/comodidade/:id', getComodidade);
+routes.post('/comodidade', saveComodidade);
+routes.put('/comodidade/:id', updateComodidade)
+routes.delete('/comodidade/:id', deleteComodidade)
 
-routes.get('/api/hospede', getHospedes);
-routes.get('/api/hospede/:id', getHospede);
-routes.post('/api/hospede', saveHospede);
-routes.put('/api/hospede/:id', updateHospede)
-routes.delete('/api/hospede/:id', deleteHospede)
+routes.get('/hospede', getHospedes);
+routes.get('/hospede/:id', getHospede);
+routes.post('/hospede', saveHospede);
+routes.put('/hospede/:id', updateHospede)
+routes.delete('/hospede/:id', deleteHospede)
+
+routes.get('/servico', getServico);
+routes.get('/servico/:id', getOneServicos);
+routes.post('/servico', saveServico);
+routes.put('/servico/:id', updateServico)
+routes.delete('/servico/:id', deleteServico)
 
 
 
