@@ -2,7 +2,9 @@ import { Router } from 'express'
 import { getOcupacoes, getOcupacao, saveOcupacao, updateOcupacao, deleteOcupacao } from './controller/OcupacaoController'
 import { getFuncionarios, getFuncionario, saveFuncionario, updateFuncionario, deleteFuncionario } from './controller/FuncionarioController'
 import { deleteComodidade, getComodidade, getComodidades, saveComodidade, updateComodidade } from './controller/ComodidadeController';
-import { deleteHospede, getHospede, getHospedes, saveHospede, updateHospede } from './controller/HospedeController1';
+import { deleteHospede, getHospede, getHospedes, saveHospede, updateHospede } from './controller/HospedeController';
+import { deleteServico, getOneServico, getServicos, saveServico, updateServico } from './controller/ServicoController'
+
 
 const routes = Router()
 
@@ -31,8 +33,8 @@ routes.post('/hospede', saveHospede);
 routes.put('/hospede/:id', updateHospede)
 routes.delete('/hospede/:id', deleteHospede)
 
-routes.get('/servico', getServico);
-routes.get('/servico/:id', getOneServicos);
+routes.get('/servico', getServicos);
+routes.get('/servico/:id', getOneServico);
 routes.post('/servico', saveServico);
 routes.put('/servico/:id', updateServico)
 routes.delete('/servico/:id', deleteServico)
