@@ -4,14 +4,18 @@ import {
     Column,
     CreateDateColumn,
     UpdateDateColumn,
-
+    OneToMany,
 } from "typeorm";
+import { NotaFiscal } from "./NotaFiscal";
 
 @Entity()
 export class Hospede {
 
     @PrimaryGeneratedColumn()
     idHospede: string;
+
+    @OneToMany(type => NotaFiscal, hospede => Hospede)
+    notasFiscais: NotaFiscal[];
 
     @Column()
     nome: string;

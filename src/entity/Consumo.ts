@@ -4,21 +4,19 @@ import {
     Column,
     CreateDateColumn,
     UpdateDateColumn,
-    ManyToOne,
 } from "typeorm";
-import { Hospede } from "./Hospede";
 
-@Entity('notaFiscal')
-export class NotaFiscal {
+@Entity()
+export class Consumo {
 
     @PrimaryGeneratedColumn()
-    idNotaFiscal: string;
-    
-    @ManyToOne(type => Hospede, notasFiscais => NotaFiscal)
-    hospede: Hospede;    
+    idConsumo: string;
 
     @Column()
-    dataEmissao: Date;
+    data: Date;
+
+    @Column()
+    quantidade: number;
 
     @CreateDateColumn()
     created_at: Date;

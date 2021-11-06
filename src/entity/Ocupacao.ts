@@ -7,6 +7,9 @@ export class Ocupacao {
     @PrimaryGeneratedColumn()
     idOcupacao: string;
 
+    @OneToMany(type => Funcionario, ocupacao => Ocupacao)
+    funcionarios: Funcionario[];
+
     @Column()
     nome: string;
  
