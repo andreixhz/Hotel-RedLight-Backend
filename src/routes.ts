@@ -39,11 +39,10 @@ routes.post('/servico', saveServico);
 routes.put('/servico/:id', updateServico)
 routes.delete('/servico/:id', deleteServico)
 
-routes.get('/notaFiscal', getServicos);
-routes.get('/notaFiscal/:id', getOneServico);
-routes.post('/notaFiscal', saveServico);
-routes.put('/notaFiscal/:id', updateServico)
-routes.delete('/notaFiscal/:id', deleteServico)
+routes.get('/notaFiscal', getNotaFiscais);
+routes.get('/notaFiscal/:id', getNotaFiscal);
+routes.post('/notaFiscal', saveNotaFiscal);
+routes.delete('/notaFiscal/:id', deleteNotaFiscal)
 
 
 
