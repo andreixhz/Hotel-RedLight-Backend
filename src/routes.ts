@@ -4,7 +4,7 @@ import { getFuncionarios, getFuncionario, saveFuncionario, updateFuncionario, de
 import { deleteComodidade, getComodidade, getComodidades, saveComodidade, updateComodidade } from './controller/ComodidadeController';
 import { deleteHospede, getHospede, getHospedes, saveHospede, updateHospede } from './controller/HospedeController';
 import { deleteServico, getOneServico, getServicos, saveServico, updateServico } from './controller/ServicoController'
-
+import { deleteNotaFiscal, getNotaFiscais, getNotaFiscal, saveNotaFiscal } from "./controller/NotaFiscalController"
 
 const routes = Router()
 
@@ -38,6 +38,12 @@ routes.get('/servico/:id', getOneServico);
 routes.post('/servico', saveServico);
 routes.put('/servico/:id', updateServico)
 routes.delete('/servico/:id', deleteServico)
+
+routes.get('/notaFiscal', getServicos);
+routes.get('/notaFiscal/:id', getOneServico);
+routes.post('/notaFiscal', saveServico);
+routes.put('/notaFiscal/:id', updateServico)
+routes.delete('/notaFiscal/:id', deleteServico)
 
 
 
